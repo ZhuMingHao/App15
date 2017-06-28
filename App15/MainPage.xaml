@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="App15.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App15"
+    xmlns:controls="using:Windows.UI.Xaml.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" x:Name="headerplace"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <local:PageHeader  Title ="This Is a Title" SubTitle = "This is a subtitle" x:Name="header" />
+        <ListView Grid.Row="1" Background="Red" x:Name="MyList" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="List Cell"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
